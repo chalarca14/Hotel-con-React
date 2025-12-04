@@ -1,0 +1,163 @@
+/* Contenedor principal */
+.hotel-container {
+  max-width: 520px;
+  margin: 48px auto;
+  padding: 32px 36px;
+  background: #000000;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(248, 239, 239, 0.738);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-left: 6px solid #ffffff; /* Azul elegante */
+  transition: box-shadow 0.3s ease;
+}
+
+.hotel-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Título */
+.hotel-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 28px;
+  color: #fbfbfb;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Etiquetas */
+.hotel-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Inputs */
+.hotel-input {
+  width: 95%;
+  padding: 14px 16px;
+  border: 1.8px solid #c7c7c7;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 24px;
+  background-color: #fefefe;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  color: #2c3e50;
+}
+
+.hotel-input::placeholder {
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.hotel-input:focus {
+  border-color: #3a7fa4;
+  outline: none;
+  box-shadow: 0 0 8px rgba(58, 127, 164, 0.45);
+  background-color: #ffffff;
+}
+
+/* Sección resultados */
+.hotel-results-title {
+  margin-top: 32px;
+  font-size: 22px;
+  color: #ffffff;
+  border-bottom: 3px solid #3a7fa4;
+  padding-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Texto de resultados */
+.hotel-result {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Total final resaltado */
+.hotel-total {
+  margin-top: 22px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #2e7d32; /* Verde elegante */
+  background: #e6f4ea;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
+  text-align: center;
+}
+
+/*------------------------ Descripción del hotel ------------------------*/
+
+.hotel-description-section {
+  max-width: 540px;
+  margin: 48px auto 36px;
+  padding: 28px 36px;
+  background: #000000;
+  border-radius: 16px;
+  border-left: 6px solid #e9e7e3; /* Dorado cálido */
+  box-shadow: 0 10px 22px rgba(255, 255, 255, 0.25);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.9s ease forwards;
+  opacity: 0;
+  transform: translateY(15px);
+  animation-fill-mode: forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hotel-description-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 18px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hotel-description {
+  font-size: 17px;
+  color: #ffffff;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 600px) {
+  .hotel-container,
+  .hotel-description-section {
+    max-width: 90%;
+    padding: 24px 20px;
+  }
+
+  .hotel-title {
+    font-size: 24px;
+  }
+
+  .hotel-description-title {
+    font-size: 20px;
+  }
+
+  .hotel-results-title {
+    font-size: 20px;
+  }
+
+  .hotel-total {
+    font-size: 22px;
+  }
+}
